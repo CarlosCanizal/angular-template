@@ -1,0 +1,116 @@
+doctype html
+html(data-ng-app="app")
+  head
+    base(href="/")
+    title
+      |Bask
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(charset="utf-8")
+  body
+
+    .page(data-ng-controller="Shell as shell")
+      .initial-page(data-ng-hide="shell.loaded")
+        
+      //- .opacity-layer(data-ng-show="shell.loading")
+      //-   div.spinner-circle
+      //-     div.dot1
+      //-     div.dot2
+      confirm-dialog
+      #shell.page
+        ui-view.page
+
+    //build:above-js
+    script(src="bower_components/angular/angular.min.js")
+    script(src="bower_components/angular-loader/angular-loader.js")
+    script(src="bower_components/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="bower_components/angular-resource/angular-resource.min.js")
+    script(src="bower_components/angular-animate/angular-animate.min.js")
+    //endbuild
+
+    //build:js
+    //- script(src="bower_components/jquery/dist/jquery.min.js")
+    //- script(src="bower_components/restangular/dist/restangular.min.js")
+    //- script(src="bower_components/underscore/underscore-min.js")
+    //- script(src="bower_components/ng-underscore/build/ng-underscore.min.js")
+    //- script(src="bower_components/angular-local-storage/dist/angular-local-storage.min.js")
+    //- script(src="common/js/moment.js")
+    //- script(src="common/js/ng-file-upload.min.js")
+    script(src="app/app.module.js")
+    script(src="app/core/core.module.js")
+    //- script(src="app/core/initialize.js")
+    script(src="app/core/config.js")
+    //- script(src="app/core/conekta/conekta.factory.js")
+    //- script(src="app/core/parse/development.headers.factory.js")
+    //- script(src="app/core/parse/parse.factory.js")
+    //- script(src="app/core/parse/sepomex.factory.js")
+    //- script(src="app/core/user/user.api.factory.js")
+    //- script(src="app/core/order/order.api.js")
+    //- script(src="app/storage/storage.module.js")
+    script(src="app/layout/layout.module.js")
+    script(src="app/layout/shell.js")
+    //- script(src="app/storage/storage.service.js")
+    //- script(src="app/login/loginForms.directive.js")
+    //- script(src="app/login/login.controller.js")
+    //- script(src="app/logout/logout.controller.js")
+    //- script(src="app/login/register.controller.js")
+    //- script(src="app/registration/registration.controller.js")
+    //- script(src="app/registration/profile/profile.controller.js")
+    //- script(src="app/registration/baby/baby.controller.js")
+    //- script(src="app/registration/bask/bask.controller.js")
+    //- script(src="app/registration/shipping/shipping.controller.js")
+    //- script(src="app/registration/mobile/mobile.controller.js")
+    //- script(src="app/registration/confirmation/confirmation.controller.js")
+    //- script(src="app/registration/response/response.controller.js")
+    //- script(src="app/registration/charge/charge.controller.js")
+    //- script(src="app/address/newAddress.directive.js")
+    //- script(src="app/address/fields.directive.js")
+    //- script(src="app/baby/baby.directive.js")
+    //- script(src="app/payment/cardForm.directive.js")
+    //- script(src="app/payment/validateCard.directive.js")
+    //- script(src="app/steps/registration.buttons.directive.js")
+    
+    //- script(src="app/core/baby/baby.api.js")
+    //- script(src="app/core/address/address.api.js")
+    //- script(src="app/core/review/review.api.js")
+    //- script(src="app/core/mobile/mobile.api.js")
+    //- script(src="app/core/invoice/invoice.api.js")
+    //- script(src="app/core/kit/kit.api.js")
+
+    //- script(src="app/home/home.controller.js")
+    //- script(src="app/dashboard/dashboard.controller.js")
+    //- script(src="app/dashboard/profile/profile.controller.js")
+    //- script(src="app/dashboard/babies/babies.controller.js")
+    //- script(src="app/dashboard/baby/baby.controller.js")
+    //- script(src="app/dashboard/bask/bask.controller.js")
+    //- script(src="app/dashboard/coupon/coupon.controller.js")
+    //- script(src="app/dashboard/friends/friends.controller.js")
+    //- script(src="app/dashboard/history/history.controller.js")
+    //- script(src="app/dashboard/invoice/invoice.controller.js")
+    //- script(src="app/dashboard/mobile/mobile.controller.js")
+    //- script(src="app/dashboard/payment/payment.controller.js")
+    //- script(src="app/dashboard/shipping/shipping.controller.js")
+    //- script(src="app/dashboard/subscription/subscription.controller.js")
+    
+    //- script(src="app/conditions/conditions.controller.js")
+    //- script(src="app/privacy/privacy.controller.js")
+    //- script(src="app/splash/splash.controller.js")
+    //- script(src="app/reports/reports.controller.js")
+    
+    //- script(src="app/dashboard/avatar/avatar.directive.js")
+    //- script(src="app/mobile/mobile.directive.js")
+    //- script(src="app/coupon/coupon.directive.js")
+    //- script(src="app/mobile/code.directive.js")
+    //- script(src="app/invoice/invoice.directive.js")
+    //- script(src="app/upload/upload.directive.js")
+    //endbuild
+    //build:css
+    //- link(rel="stylesheet", href="bower_components/pure/pure-min.css")
+    //- link(rel="stylesheet", href="bower_components/pure/grids-responsive-min.css")
+    //- link(rel="stylesheet", href="bower_components/components-font-awesome/css/font-awesome.min.css")
+    //- link(rel="stylesheet", href="common/css/fontface.css")
+    //- link(rel="stylesheet", href="common/css/buttons.css")
+    //- link(rel="stylesheet", href="common/css/above-the-fold.css")
+    //- link(rel="stylesheet", href="common/css/main.css")
+    //- link(rel="stylesheet", href="common/css/media-query.css")
+    //- link(rel="stylesheet", href="common/css/loading/loading.css")
+    //endbuild

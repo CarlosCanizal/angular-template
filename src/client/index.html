@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+  <head>
+    <base href="/">
+    <title>Bask</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div data-ng-controller="Shell as shell" class="page">
+      <div data-ng-hide="shell.loaded" class="initial-page"></div>
+      <confirm-dialog></confirm-dialog>
+      <div id="shell" class="page">
+        <ui-view class="page"></ui-view>
+      </div>
+    </div>
+    <!--build:above-js-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-loader/angular-loader.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <!--endbuild-->
+    <!--build:js-->
+    <script src="app/app.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/config.js"></script>
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/shell.js"></script>
+    <!--endbuild-->
+    <!--build:css-->
+    <!--endbuild-->
+  </body>
+</html>
