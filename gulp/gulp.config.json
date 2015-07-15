@@ -1,9 +1,40 @@
 {
+  "client": "src/client/",
+  "htmlTemplates": "src/client/app/**/*.html",
+  "jsonTemplates": "src/client/app/**/*.json",
+  "vendorJs": [
+    "src/client/bower_components/angular/angular.js",
+    "src/client/bower_components/angular-animate/angular-animate.js",
+    "src/client/bower_components/angular-resource/angular-resource.js",
+    "src/client/bower_components/angular-ui-router/release/angular-ui-router.js"
+  ],
+  "vendorCss": [
+  ],
+  "asyncLoaders": [
+    "src/client/bower_components/angular-loader/angular-loader.js",
+    "src/client/bower_components/script.js/dist/script.js"
+  ],
+  "css": [
+    "src/client/common/styles/main.css",
+    "src/client/app/**/*.css"
+  ],
+  "js": [
+    "src/client/app/**/*module*.js",
+    "src/client/app/**/*.js"
+  ],
+  "fonts": [
+    "src/client/common/fonts/**/*"
+  ],
+  "images": [
+    "src/client/common/images/**/*" 
+  ],
   "sass": [
     "src/client/common/**/*.sass",
     "src/client/app/**/*.sass"
   ],
   "jade": [
     "src/client/**/*.jade" 
-  ]
+  ],
+  "report": "report/",
+  "build": "./build/"
 }
