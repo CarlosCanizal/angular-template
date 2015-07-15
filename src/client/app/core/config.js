@@ -8,9 +8,9 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
 
   // $locationProvider.html5Mode(true);
   $stateProvider
-    .state('splash',{
+    .state('index',{
       url:'/',
-      templateUrl: 'app/splash/splash.template.html',
+      templateUrl: 'app/index/index.template.html',
     })
     
   $urlRouterProvider.otherwise('/');

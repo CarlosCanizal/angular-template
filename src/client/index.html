@@ -7,13 +7,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div data-ng-controller="Shell as shell" class="page">
-      <div data-ng-hide="shell.loaded" class="initial-page"></div>
-      <confirm-dialog></confirm-dialog>
-      <div id="shell" class="page">
-        <ui-view class="page"></ui-view>
-      </div>
-    </div>
+    <ui-view></ui-view>
     <!--build:above-js-->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-loader/angular-loader.js"></script>
@@ -25,11 +19,9 @@
     <script src="app/app.module.js"></script>
     <script src="app/core/core.module.js"></script>
     <script src="app/core/config.js"></script>
-    <script src="app/layout/layout.module.js"></script>
-    <script src="app/layout/shell.js"></script>
     <!--endbuild-->
     <!--build:css-->
-    <link rel="stylesheet" href="common/css/splash.css">
+    <link rel="stylesheet" href="common/css/main.css">
     <!--endbuild-->
   </body>
 </html>
