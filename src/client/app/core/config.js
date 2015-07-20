@@ -10,7 +10,7 @@ function config($locationProvider,$urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('index',{
       url:'/',
-      templateUrl: 'app/index/index.template.html',
+      templateUrl : 'app/index/index.template.html' 
     })
     
   $urlRouterProvider.otherwise('/');

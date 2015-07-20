@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+  <head>
+    <base href="/">
+    <title>Bask</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <style type="text/css">
+.fold,body,html{height:100%}body{margin:0;padding:0;background-color:#ff0}.loading-page{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#00f}.content{background-color:#000;color:#fff}.header{width:100%;height:3rem;background-color:#00f}
+</style>
+<script>
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['common/all.min-e220570a23.css']));
+</script>
+<noscript>
+<link rel="stylesheet" href="common/all.min-e220570a23.css">
+</noscript>
+  </head>
+  <body>
+    <div data-ng-hide="loaded" class="loading-page">loading</div>
+    <div class="fold">
+      <div class="header">Kiwinetworks</div>
+      <div class="content">Hey listen</div>
+    </div>
+    <!-- clear:js-->
+    
+    <!-- endinject-->
+    
+    <script>
+      // inject-angular-loader:js //
+      !function(){"use strict";function r(r){return"function"==typeof r}function e(r,e){return e=e||Error,function(){var n,t,o=2,i=arguments,u=i[0],a="["+(r?r+":":"")+u+"] ",c=i[1];for(a+=c.replace(/\{\d+\}/g,function(r){var e=+r.slice(1,-1),n=e+o;return n<i.length?toDebugString(i[n]):r}),a+="\nhttp://errors.angularjs.org/1.4.3/"+(r?r+"/":"")+u,t=o,n="?";t<i.length;t++,n="&")a+=n+"p"+(t-o)+"="+encodeURIComponent(toDebugString(i[t]));return new e(a)}}function n(n){function t(r,e,n){return r[e]||(r[e]=n())}var o=e("$injector"),i=e("ng"),u=t(n,"angular",Object);return u.$$minErr=u.$$minErr||e,t(u,"module",function(){var e={};return function(n,u,a){var c=function(r,e){if("hasOwnProperty"===r)throw i("badname","hasOwnProperty is not a valid {0} name",e)};return c(n,"module"),u&&e.hasOwnProperty(n)&&(e[n]=null),t(e,n,function(){function e(r,e,n,t){return t||(t=i),function(){return t[n||"push"]([r,e,arguments]),l}}function t(e,t){return function(o,u){return u&&r(u)&&(u.$$moduleName=n),i.push([e,t,arguments]),l}}if(!u)throw o("nomod","Module '{0}' is not available! You either misspelled the module name or forgot to load it. If registering a module ensure that you specify the dependencies as the second argument.",n);var i=[],c=[],s=[],d=e("$injector","invoke","push",c),l={_invokeQueue:i,_configBlocks:c,_runBlocks:s,requires:u,name:n,provider:t("$provide","provider"),factory:t("$provide","factory"),service:t("$provide","service"),value:e("$provide","value"),constant:e("$provide","constant","unshift"),decorator:t("$provide","decorator"),animation:t("$animateProvider","register"),filter:t("$filterProvider","register"),controller:t("$controllerProvider","register"),directive:t("$compileProvider","directive"),config:d,run:function(r){return s.push(r),this}};return a&&d(a),l})}})}n(window)}(window),angular.Module;
+      // endinject //
+      // inject-script:js //
+    !function(n,t){"undefined"!=typeof module&&module.exports?module.exports=t():"function"==typeof define&&define.amd?define(t):this[n]=t()}("$script",function(){function n(n,t){for(var e=0,o=n.length;o>e;++e)if(!t(n[e]))return c;return 1}function t(t,e){n(t,function(n){return!e(n)})}function e(r,u,f){function c(n){return n.call?n():s[n]}function l(){if(!--y){s[v]=1,g&&g();for(var e in m)n(e.split("|"),c)&&!t(m[e],c)&&(m[e]=[])}}r=r[a]?r:[r];var d=u&&u.call,g=d?u:f,v=d?r.join(""):u,y=r.length;return setTimeout(function(){t(r,function n(t,e){return null===t?l():(t=e||-1!==t.indexOf(".js")||/^https?:\/\//.test(t)||!i?t:i+t+".js",p[t]?(v&&(h[v]=1),2==p[t]?l():setTimeout(function(){n(t,!0)},0)):(p[t]=1,v&&(h[v]=1),void o(t,l)))})},0),e}function o(n,t){var e,o=u.createElement("script");o.onload=o.onerror=o[d]=function(){o[l]&&!/^c|loade/.test(o[l])||e||(o.onload=o[d]=null,e=1,p[n]=2,t())},o.async=1,o.src=r?n+(-1===n.indexOf("?")?"?":"&")+r:n,f.insertBefore(o,f.lastChild)}var i,r,u=document,f=u.getElementsByTagName("head")[0],c=!1,a="push",l="readyState",d="onreadystatechange",s={},h={},m={},p={};return e.get=o,e.order=function(n,t,o){!function i(r){r=n.shift(),n.length?e(r,i):e(r,t,o)}()},e.path=function(n){i=n},e.urlArgs=function(n){r=n},e.ready=function(o,i,r){o=o[a]?o:[o];var u=[];return!t(o,function(n){s[n]||u[a](n)})&&n(o,function(n){return s[n]})?i():!function(n){m[n]=m[n]||[],m[n][a](i),r&&r(u)}(o.join("|")),e},e.done=function(n){e([null],n)},e});
+    // endinject //
+      $script([
+        // inject:js //
+        '/vendor.min-93a5a8e83d.js',
+        '/all.min-1a65dd7d9a.js'
+        // endinject //
+      ], 
+      function() {
+        //angular.bootstrap(document, ['app']);
+      });
+    </script>
+  </body>
+</html>

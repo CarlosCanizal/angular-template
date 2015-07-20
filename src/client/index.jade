@@ -6,21 +6,46 @@ html(data-ng-app="app")
       |Bask
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(charset="utf-8")
+    //build:css
+    link(rel="stylesheet", href="common/styles/main.css")
+    //endbuild
   body
-    ui-view
+    .loading-page(data-ng-hide="loaded")
+      |loading
+    .fold
+      .header
+        |Kiwinetworks
+      .content
+        |Hey listen
 
-    //build:above-js
+    // clear:js
     script(src="bower_components/angular/angular.min.js")
+    script(src="bower_components/angular-sanitize/angular-sanitize.min.js")
     script(src="bower_components/angular-ui-router/release/angular-ui-router.min.js")
     script(src="bower_components/angular-resource/angular-resource.min.js")
     script(src="bower_components/angular-animate/angular-animate.min.js")
-    //endbuild
-
-    //build:js
+    
     script(src="app/app.module.js")
+    script(src="app/initialize.js")
     script(src="app/core/core.module.js")
     script(src="app/core/config.js")
-    //endbuild
-    //build:css
-    link(rel="stylesheet", href="common/css/main.css")
-    //endbuild
+    // endinject
+
+
+    script.
+      // inject-angular-loader:js //
+      //
+    script(src="/bower_components/angular-loader/angular-loader.js")
+    script.
+      // endinject //
+      // inject-script:js //
+    script(src="/bower_components/script.js/dist/script.js")
+    script.
+      // endinject //
+      $script([
+        // inject:js //
+        // endinject //
+      ], 
+      function() {
+        //angular.bootstrap(document, ['app']);
+      });

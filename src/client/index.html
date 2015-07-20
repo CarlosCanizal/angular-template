@@ -5,22 +5,47 @@
     <title>Bask</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
+    <!--build:css-->
+    <link rel="stylesheet" href="common/styles/main.css">
+    <!--endbuild-->
   </head>
   <body>
-    <ui-view></ui-view>
-    <!--build:above-js-->
+    <div data-ng-hide="loaded" class="loading-page">loading</div>
+    <div class="fold">
+      <div class="header">Kiwinetworks</div>
+      <div class="content">Hey listen</div>
+    </div>
+    <!-- clear:js-->
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <!--endbuild-->
-    <!--build:js-->
     <script src="app/app.module.js"></script>
+    <script src="app/initialize.js"></script>
     <script src="app/core/core.module.js"></script>
     <script src="app/core/config.js"></script>
-    <!--endbuild-->
-    <!--build:css-->
-    <link rel="stylesheet" href="common/css/main.css">
-    <!--endbuild-->
+    <!-- endinject-->
+    
+    <script>
+      // inject-angular-loader:js //
+      //
+    </script>
+    <script src="/bower_components/angular-loader/angular-loader.js"></script>
+    <script>
+      // endinject //
+      // inject-script:js //
+    </script>
+    <script src="/bower_components/script.js/dist/script.js"></script>
+    <script>
+      // endinject //
+      $script([
+        // inject:js //
+        // endinject //
+      ], 
+      function() {
+        //angular.bootstrap(document, ['app']);
+      });
+    </script>
   </body>
 </html>

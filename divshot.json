@@ -1,0 +1,16 @@
+{
+  "headers": {
+    
+  },
+  "cache_control": {
+      "/": "no-cache, no-store",
+      "*.js":31536000,
+      "common/*.css":31536000
+  },
+  "name": "my-bask-demo",
+  "root": "build",
+  "error_page": "error.html",
+  "routes": {
+    "**": "index.html"
+  }
+}

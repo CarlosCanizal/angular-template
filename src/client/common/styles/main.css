@@ -1,0 +1,59 @@
+/* line 1, stdin */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+  height: 100%; }
+
+/* line 7, stdin */
+html {
+  height: 100%; }
+
+/* line 10, stdin */
+.le-wild-style {
+  background-color: blue; }
+
+/* line 13, stdin */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+  background-color: red; }
+
+/* line 17, stdin */
+.fold {
+  height: 100%; }
+
+/* line 20, stdin */
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue; }
+
+/* line 28, stdin */
+.main {
+  height: 100%;
+  background-color: red;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center; }
+
+/* line 35, stdin */
+.content {
+  background-color: black;
+  color: white; }
+
+/* line 39, stdin */
+.hideIt {
+  display: none; }
+
+/* line 42, stdin */
+.main.hideIt.showIt {
+  display: block; }
+
+/* line 45, stdin */
+.header {
+  width: 100%;
+  height: 3rem;
+  background-color: blue; }

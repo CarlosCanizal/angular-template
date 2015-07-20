@@ -1,0 +1,1 @@
+angular.module("app.core").run(["$templateCache", function($templateCache) {$templateCache.put("app/index/index.template.html","<div data-ng-class=\"{\'display-block\':loaded}\" class=\"main display-none\"><div><img src=http://www.supergraphictees.com/wp-content/uploads/2013/01/DARKNIGHT-WHITE01.jpg></div></div>");}]);
